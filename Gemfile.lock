@@ -95,6 +95,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.13.0)
+    ffi (1.17.0)
     ffi (1.17.0-x86_64-darwin)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -128,6 +129,7 @@ GEM
     method_source (1.1.0)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.7)
     minitest (5.24.1)
     msgpack (1.7.2)
     mysql2 (0.5.6)
@@ -141,9 +143,13 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
+    nokogiri (1.16.7)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.16.7-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.5.7)
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
@@ -240,6 +246,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-unknown
 
 DEPENDENCIES
   bootsnap
@@ -251,6 +258,7 @@ DEPENDENCIES
   jbuilder
   mini_magick
   mysql2 (~> 0.5)
+  pg
   puma (~> 5.0)
   rails (~> 7.0.0)
   selenium-webdriver
