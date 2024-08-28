@@ -40,8 +40,8 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    prototype = Prototype.find(params[:id])
-    prototype.destroy
+    @prototype = Prototype.find(params[:id])
+    @prototype.destroy
     redirect_to root_path
   end
   
@@ -53,7 +53,8 @@ class PrototypesController < ApplicationController
   end
 
   def move_to_index
-    redirect_to root_path unless  current_user == @prototype.user
+    @prototype = Prototype.find(params[:id])
+    redirect_to root_path  unless  current_user.id == @prototype.user_id
   end
 
 end
